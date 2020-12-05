@@ -31,7 +31,7 @@ The agent will receive a state from our environment and he will take an action d
 
 Lunar_lander with random agent.
 
-![](readme/lunar_lander_random_agent.mp4)
+![](readme/lunar_lander_random_agent.gif)
 
 Landing pad is always at coordinates (0,0). Coordinates are the first two numbers in state vector. Reward for moving from the top of the screen to landing pad and zero speed is about 100..140 points. If lander moves away from landing pad it loses reward back. Episode finishes if the lander crashes or comes to rest, receiving additional -100 or +100 points. Each leg ground contact is +10. Firing main engine is -0.3 points each frame. Solved is 200 points. Landing outside landing pad is possible. Fuel is infinite, so an agent can learn to fly and then land on its first attempt. Four discrete actions available: do nothing, fire left orientation engine, fire main engine, fire right orientation engine.ass. Therefore, the only way to succeed is to drive back and forth to build up momentum.
 
@@ -110,4 +110,4 @@ we simulated 2000 episodes for each one we have a score(sum of all rewards in on
 we can see that the score is low in the beginning because our agent wasn't trainned yet and we many take random action because epsilon is still high, we can make epsilon decay low to explore our env more but in this case we dont need it because its a simple game.
 
 ## Simulation
-![](readme/video.mvo)
+![](readme/video.gif)
