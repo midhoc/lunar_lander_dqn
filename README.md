@@ -61,7 +61,7 @@ and discret action space with 4 possible actions
 To train this agent we will use [Deep Q Learning](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf). To implement it we need a memory to store agent-env interactions and a model and of course an agent class to handle the Q-values, memory and model.
 
 ### Model
-![](readme/model)
+![](readme/model.png)
 
 Lunar_lander is a simple environement so we used a simple model with input layer of 8 noeuds, 2 hidden layers of 256 noeuds with relu activation function and output layer is 4 with linear activation function.
 
@@ -72,7 +72,7 @@ We use it to store agent-env interactions (state, action, new_state, reward, don
 In this project we store the last 1_000_000 interactions, and for each step we select 64 random interaction from it.
 
 ### Training 
-![](readme/algo)
+![](readme/algo.png)
 
 We train our agent for a number of episodes and for each episodes we have a number of steps that ends with a proper landing or a fail, for each step we will have a state, using this state we will take an action and we will get a reward, new_state and done flag if we finish the episode.
 
@@ -103,11 +103,11 @@ we update Q_values[action] = reward + gamma * max(futur_Q_values)  if its not a 
 
 ## Result
 
-![](readme/graph)
+![](readme/graph.png)
 
 we simulated 2000 episodes for each one we have a score(sum of all rewards in one episode).
 
 we can see that the score is low in the beginning because our agent wasn't trainned yet and we many take random action because epsilon is still high, we can make epsilon decay low to explore our env more but in this case we dont need it because its a simple game.
 
 ## Simulation
-![](readme/video)
+![](readme/video.mvo)
